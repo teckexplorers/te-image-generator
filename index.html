@@ -62,18 +62,18 @@
                 <div class="prompt-actions">
                     
                     <div class="select-wrapper">
-                        <select name="" class="custom-select" required>
+                        <select name="" class="custom-select" id="model-select" required>
                             <option value="">Select Model</option>
                             <option value="black-forest-labs/FLUX.1-dev">Flux.1-Dev</option>
                             <option value="black-forest-labs/FLUX.1-schnell">Flux.1-Schnell</option>
                             <option value="stabilityai/stable-diffusion-xl-base-1.0">Stable Diffusion-XL</option>
-                            <option value="runwayml/stable-diffusion-v1-5">Stable Diffusion v1.5</option>
-                            <option value="prompthero/openjourney">OpenJourney</option>
+                            <!-- <option value="strangerzonehf/Flux-Super-Realism-LoRA">Stable Diffusion v1-4</option> -->
+                            <!-- <option value="playgroundai/playground-v2.5-1024px-aesthetic">Playground v2.5</option> -->
                         </select>
                     </div>
 
                     <div class="select-wrapper">
-                        <select name="image-count" class="custom-select" required>
+                        <select name="image-count" class="custom-select" id="image-count" required>
                             <option value="" selected disabled>Select Image Count</option>
                             <option value="1">1 Image</option>
                             <option value="2">2 Images</option>
@@ -83,7 +83,7 @@
                     </div>
 
                     <div class="select-wrapper">
-                        <select name="aspect-ratio" class="custom-select" required>
+                        <select name="aspect-ratio" class="custom-select" id="frame-select" required>
                             <option value="">Select Aspect Ratio</option>
                             <option value="1/1">Sqaure</option>
                             <option value="16/9">Landscape</option>
@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="gallery-grid">
-                    <div class="img-card loading">
+                    <!-- <div class="img-card loading">
                         <div class="status-container">
                             <div class="spinner"></div>
                             <i class="fa-solid fa-triangle-exclamation"></i>
@@ -111,31 +111,7 @@
                                 <i class="fa-solid fa-download"></i>
                             </button>
                         </div>
-                    </div>
-                    <div class="img-card">
-                        <img src="assets/img/test.png" alt="" class="result-img">
-                        <div class="img-overlay">
-                            <button class="img-download-btn">
-                                <i class="fa-solid fa-download"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="img-card">
-                        <img src="assets/img/test.png" alt="" class="result-img">
-                        <div class="img-overlay">
-                            <button class="img-download-btn">
-                                <i class="fa-solid fa-download"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="img-card">
-                        <img src="assets/img/test.png" alt="" class="result-img">
-                        <div class="img-overlay">
-                            <button class="img-download-btn">
-                                <i class="fa-solid fa-download"></i>
-                            </button>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
             </form>
         </div>
