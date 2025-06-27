@@ -10,9 +10,9 @@ const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
 const promptBtn = document.querySelector(".prompt-btn");
 const promptInput = document.querySelector(".prompt-input");
 const galleryGrid = document.querySelector(".gallery-grid");
-const generateBtn = document.querySelector(".generateBtn");
+const generateBtn = document.querySelector(".generate-btn");
 
-const API_KEY = "";
+// const API_KEY = "";
 
 // TYPED JS FOR LOGO BLINKER
 document.addEventListener('DOMContentLoaded', () => {
@@ -108,7 +108,7 @@ const updateImageCards = (imgIndex, imgURL) =>{
 }
 
 const generateImages = async(selectModel, imageCount, aspectRatio, promptText) => {
-    const MODEL_URL = `https://api-inference.huggingface.co/models/${selectModel}`;
+    const MODEL_URL = `https://api.inference.teckexplorers.com`;
     const {width, height} = getImageDimensions(aspectRatio);
 
     generateBtn.setAttribute("disabled", "true");
@@ -117,14 +117,14 @@ const generateImages = async(selectModel, imageCount, aspectRatio, promptText) =
       try {
         const response = await fetch(MODEL_URL, {
           headers: {
-            Authorization: `Bearer ${API_KEY}`,
             "Content-Type": "application/json",
-            "x-use-cache": "false",
           },
           method: "POST",
           body: JSON.stringify({
-            inputs: promptText,
-            parameters: { width, height },
+            selectModel,
+            promptText,
+            width,
+            height,
           }),
         });
 
